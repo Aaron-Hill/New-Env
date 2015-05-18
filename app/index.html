@@ -1,0 +1,121 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css styles/main.css -->
+    <link href='https://fonts.googleapis.com/css?family=Oxygen:300,400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+  </head>
+  <body ng-app="NewEnvApp">
+    <!--[if lt IE 7]>
+      <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
+    <![endif]-->
+
+    <!--[if lt IE 9]>
+      <script src="bower_components/es5-shim/es5-shim.js"></script>
+      <script src="bower_components/json3/lib/json3.min.js"></script>
+    <![endif]-->
+
+    <!-- Add your site or application content here -->
+    <div class="container">
+      <div class="header">
+      <div class="container">
+        <img src="../img/sherlock.jpeg" width="180" height="34">
+      </div>
+    </div>
+
+    <div class="main" ng-controller="MainCtrl">
+      <div class="container">
+        <div class="content">
+          <div class="row">
+            
+            <div class="col-md-3" class="series_img">
+            </div>
+            
+            <div class="col-md-6">
+              <h1 class="series">{{ program.series }}</h1>
+              <h2 class="episode">{{ program.episode }}</h2>
+              <p class="description">{{ program.description }}</p>
+            </div>
+
+            <div class="col-md-3">
+              <ul class="list-group">
+                <li class="list-group-item"><span>Date:</span>{{ program.datetime | date}}</li>
+                <li class="list-group-item"><span>On air:</span>{{ program.datetime | date:  'EEEE' }}</li>
+                <li class="list-group-item"><span>Time:</span>{{ program.datetime | date: 'shortTime' }}</li>
+                <li class="list-group-item"><span>Season:</span>{{ program.season }}</li>
+                <li class="list-group-item"><span>Genre:</span>{{ program.genre }}</li>
+              </ul>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3">
+            <h3>Bolt</h3>
+            <ul>
+              <li>Careers</li>
+              <li>Terms</li>
+              <li>Help</li>
+            </ul>
+          </div>
+          <div class="col-md-3">
+            <h3>More Bolt</h3>
+            <ul>
+              <li>Gift Cards</li>
+              <li>Trailers</li>
+            </ul>
+          </div>
+          <div class="col-md-3">
+            <h3>News</h3>
+            <ul>
+              <li>Blog</li>
+              <li>Twitter</li>
+              <li>YouTube</li>
+              <li>Google+</li>
+              <li>Facebook</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+
+    <!-- build:js scripts/scripts.js -->
+    <script src="scripts/config/config.js"></script>
+    <script src="scripts/config/router.js"></script>
+    <script src="scripts/config/routes.js"></script>
+    <script src="scripts/app.js"></script>
+    <script src="scripts/controllers/main.js"></script>
+    <!-- endbuild -->
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    <script>
+      var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+      (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+      g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+      s.parentNode.insertBefore(g,s)}(document,'script'));
+    </script>
+  </body>
+</html>
